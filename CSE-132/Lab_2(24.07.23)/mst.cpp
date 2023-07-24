@@ -44,3 +44,19 @@ void primsMST(int graph[v][v]){
         printMST(parent, graph);
     }
 }
+
+void printMST(int parent[], int graph[v][v]){
+    cout<<"Edge \t Cost"<<endl;
+    for(int i=1; i<v; i++){
+        cout <<parent[i]<<i<<"\t"<<graph[i][parent[i]]<<"\n";
+    }
+}
+
+int main(){
+    int graph[v][v] = {{0, 1, 2, 1},
+                        {1, 0, 1, 2},
+                        {2, 1, 0, 2},
+                        {1, 3, 2, 0}};
+    
+    primsMST(graph);
+}
