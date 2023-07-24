@@ -15,6 +15,13 @@ int minimumCost(int cost[], bool mstSet[]){
     return min_index;
 }
 
+void printMST(int parent[], int graph[v][v]){
+    cout<<"Edge \t Cost"<<endl;
+    for(int i=1; i<v; i++){
+        cout <<parent[i]<<i<<"\t"<<graph[i][parent[i]]<<"\n";
+    }
+}
+
 void primsMST(int graph[v][v]){
     int parent[v], cost[v];
     bool mstSet[v];
@@ -42,13 +49,6 @@ void primsMST(int graph[v][v]){
             }
         }
         printMST(parent, graph);
-    }
-}
-
-void printMST(int parent[], int graph[v][v]){
-    cout<<"Edge \t Cost"<<endl;
-    for(int i=1; i<v; i++){
-        cout <<parent[i]<<i<<"\t"<<graph[i][parent[i]]<<"\n";
     }
 }
 
