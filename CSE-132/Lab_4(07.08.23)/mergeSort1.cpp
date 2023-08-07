@@ -18,22 +18,40 @@ void merge(int A[], int b, int m, int e){
 
     while(l<s1 && r<s2)
     {
-        if(R[r]<L[l]){
+        if(R[r]<=L[l]){
             A[p] = R[r];
             r++;
         }
-    } 
+        else{
+            A[p] = L[l];
+            l++;
+        }
+        p++;
+    }
+    while(l<s1)
+    {
+        A[p] = L[l];
+        l++;
+        p++;
+    }
+    while(r<s2){
+        A[p] = R[r];
+        r++;
+        p++;
+    }
+    
+     
 }
 
 void mergeSort(int A[], int b, int e){
     int m;
     if(b<e){
-        return;
-    }
-    m = (b+(e-b))/2;
+       
+    m = b+(e-b)/2;
     mergeSort(A, b, m);
     mergeSort(A, m+1, e);
     merge(A, b, m, e);
+    }
 }
 
 int main(){
@@ -54,7 +72,7 @@ int main(){
 
     int arr[4] = {3, 2 ,4 ,1};
     
-    mergeSort(arr, 0, 4);
+    mergeSort(arr, 0, 3);
 
     for(int i=0; i<4; i++){
         cout<<arr[i]<<" ";
