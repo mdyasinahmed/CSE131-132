@@ -23,7 +23,7 @@ double fracknapsack(int B, Item arr[], int size){
             totalProfit += arr[i].profit;
         }
         else{
-            totalProfit += (double)arr[i].profit*(double)(B/arr[i].weight);
+            totalProfit += (double)arr[i].profit*(double)((double)B/(double)arr[i].weight);
             break;
         }
     }
