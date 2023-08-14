@@ -24,8 +24,9 @@ void ac(Activity arr[], int size){
 
 int main()
 {
-    Activity arr[] = {{1,2}, {2,3}};
+    //Activity arr[] = {{1,2}, {2,3}, {4,5}, {5,6}, {6,7}};
+    Activity arr[] = {{1,2}, {3,4}, {5,6}, {3,9}, {6,7}};
 
-    ac(arr, 2);
+    ac(arr, 5);
 
 }
