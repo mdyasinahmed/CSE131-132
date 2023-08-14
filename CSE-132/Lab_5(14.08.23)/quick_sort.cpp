@@ -5,12 +5,12 @@ int partition(int arr[], int low, int high){
     int pivot = arr[high];
     int i = low - 1;
     for(int j = low; j<high; j++){
-        if(arr[j]<arr[pivot]){
+        if(arr[j]<pivot){
             i++;
             swap(arr[j], arr[i]);
         }
     }
-    swap(arr[i+1], arr[pivot]);
+    swap(arr[i+1], arr[high]);
     return (i+1);
 }
 
