@@ -2,7 +2,14 @@
 using namespace std;
 
 int minCoinUtil(int coin[],int m,int v,int* dp) {
-    
+    if(v == 0) {
+        return 0;
+    }
+    if(dp[v] != -1) {
+        return dp[v];
+    }
+    int ans = INT_MAX;
+
 
 }
 
