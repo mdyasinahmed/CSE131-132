@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void merge(int arr[], int left, int right, int mid)
-{
+// function for margin array
+void merge(int arr[], int left, int right, int mid) {
     int nL = mid - left + 1;
     int nR = right - mid;
 
@@ -54,8 +54,8 @@ void merge(int arr[], int left, int right, int mid)
     delete[] b;
 }
 
-void mergeSort(int arr[], int left, int right)
-{
+// function for merge sort
+void mergeSort(int arr[], int left, int right) {
     if (left < right)
     {
 
@@ -68,8 +68,9 @@ void mergeSort(int arr[], int left, int right)
     }
 }
 
-void printArray(int arr[], int size)
-{
+
+// function for printing array
+void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
@@ -77,8 +78,8 @@ void printArray(int arr[], int size)
     cout << endl;
 }
 
-int main()
-{
+// main function
+int main() {
     int arr[] = {6, 5, 12, 10, 9, 1};
     int size = sizeof(arr) / sizeof(arr[0]);
 
