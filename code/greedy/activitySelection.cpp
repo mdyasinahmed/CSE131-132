@@ -32,7 +32,14 @@ void selectActivities(vector<Activity>& activities) {
 }
 
 int main() {
-    vector<Activity> activities = {{1, 3}, {2, 5}, {3, 6}, {5, 7}, {6, 8}, {8, 9}};
+    vector <Activity> activities = {
+        {1, 3}, 
+        {2, 5}, 
+        {3, 6}, 
+        {5, 3}, 
+        {6, 8}, 
+        {8, 9}
+    };
 
     selectActivities(activities);
 
