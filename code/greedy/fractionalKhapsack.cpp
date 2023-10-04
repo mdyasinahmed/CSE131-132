@@ -3,36 +3,36 @@ using namespace std;
 
 struct Item {
     int weight;
-    int value;
+    int profit;
 };
 
 bool compareItems(const Item& a, const Item& b) {
-    double ratioA = static_cast<double> (a.value) / a.weight;
-    double ratioB = static_cast<double> (b.value) / b.weight;
+    double fractionA = static_cast<double> (a.profit) / a.weight;
+    double fractionB = static_cast<double> (b.profit) / b.weight;
 
-    return ratioA > ratioB;
+    return fractionA > fractionB;
 }
 
 double fractionalKnapsack(vector<Item>& items, int capacity) {
     sort(items.begin(), items.end(), compareItems);
 
-    double totalValue = 0.0;
+    double totalprofit = 0.0;
     int currentWeight = 0;
 
     for(const Item& item : items) {
         if(currentWeight + item.weight <= capacity) {
             currentWeight = currentWeight + item.weight;
-            totalValue = totalValue + item.value;
+            totalprofit = totalprofit + item.profit;
         } 
         else {
             double remainingCapacity = capacity - currentWeight;
             double fraction = remainingCapacity / item.weight;
-            totalValue += item.value * fraction;
+            totalprofit += item.profit * fraction;
             break;
         }
     }
 
-    return totalValue;
+    return totalprofit;
 }
 
 int main() {
@@ -44,9 +44,9 @@ int main() {
 
     int knapsackCapacity = 50;
 
-    double maxValue = fractionalKnapsack(items, knapsackCapacity);
+    double maxprofit = fractionalKnapsack(items, knapsackCapacity);
 
-    cout << "Maximum value obtained = " << maxValue << endl;
+    cout << "Maximum profit obtained = " << maxprofit << endl;
 
     return 0;
 }
