@@ -17,8 +17,8 @@ int minCoins(vector<int>& coins, int amount) {
 }
 
 int main() {
-    vector<int> coins = {1, 2, 5};
-    int amount = 11;
+    vector<int> coins = {1, 3, 5};
+    int amount = 8;
 
     int minCoinsRequired = minCoins(coins, amount);
     
