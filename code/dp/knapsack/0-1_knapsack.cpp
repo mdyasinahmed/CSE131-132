@@ -8,19 +8,19 @@ struct Item {
 
 int knapsack(vector<Item>& items, int capacity) {
     int n = items.size();
-    vector<vector<int>> dp(n + 1, vector<int>(capacity + 1, 0));
+    vector<vector<int>> beg(n + 1, vector<int>(capacity + 1, 0));
 
     for(int i = 1; i <= n; i++) {
         for(int w = 0; w <= capacity; w++) {
             if(items[i - 1].weight <= w) {
-                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - items[i - 1].weight] + items[i - 1].value);
+                beg[i][w] = max(beg[i - 1][w], beg[i - 1][w - items[i - 1].weight] + items[i - 1].value);
             } else {
-                dp[i][w] = dp[i - 1][w];
+                beg[i][w] = beg[i - 1][w];
             }
         }
     }
 
-    return dp[n][capacity];
+    return beg[n][capacity];
 }
 
 
