@@ -6,14 +6,11 @@ using namespace std;
 int countWays(vector <int> &coins, int amount) {
     vector <int> table(amount+1, 0);
     table[0] = 1;
-    cout << table[0] << endl;
 
     for(int coin : coins) {
         for(int i = coin; i <= amount; i++) {
             table[i] = table[i] + table[i-coin];
-            cout << table[i] << " ";
         }
-        cout << endl;
     }
 
     return table[amount];

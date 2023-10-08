@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/code/sorting",
-      "program": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/code/sorting/build/Debug/outDebug",
+      "cwd": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/code/dp/coins",
+      "program": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/code/dp/coins/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
