@@ -22,10 +22,10 @@ void lcsAlgo(char *S1, char *S2, int m, int n)
         }
         cout << endl;
     }
-    cout << m << endl;
-    cout << n << endl;
+    // cout << m << endl;
+    //cout << n << endl;
     int index = LCS_table[m][n];
-    cout << index << endl;
+    //cout << index << endl;
     char lcsAlgo[index + 1];
     
     lcsAlgo[index] = '\0';
