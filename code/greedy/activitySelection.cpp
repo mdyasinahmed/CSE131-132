@@ -20,7 +20,7 @@ void selectActivities(vector<Activity>& activities) {
     cout  << ") ";
 
     for(int i = 1; i<activities.size(); i++) {
-        if(activities[i].start >= activities[selected].finish) {
+        if(activities[i].start >= activities[selected].finish){
             selected = i;
             cout << "(";
             cout << activities[selected].start << ", " << activities[selected].finish;

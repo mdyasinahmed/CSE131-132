@@ -16,23 +16,23 @@ bool compareItems(const Item& a, const Item& b) {
 double fractionalKnapsack(vector<Item>& items, int capacity) {
     sort(items.begin(), items.end(), compareItems);
 
-    double totalprofit = 0.0;
+    double totalProfit = 0.0;
     int currentWeight = 0;
 
     for(const Item& item : items) {
         if(currentWeight + item.weight <= capacity) {
             currentWeight = currentWeight + item.weight;
-            totalprofit = totalprofit + item.profit;
+            totalProfit = totalProfit + item.profit;
         } 
         else {
             double remainingCapacity = capacity - currentWeight;
             double fraction = remainingCapacity / item.weight;
-            totalprofit += item.profit * fraction;
+            totalProfit += item.profit * fraction;
             break;
         }
     }
 
-    return totalprofit;
+    return totalProfit;
 }
 
 int main() {
@@ -44,9 +44,9 @@ int main() {
 
     int knapsackCapacity = 50;
 
-    double maxprofit = fractionalKnapsack(items, knapsackCapacity);
+    double maxProfit = fractionalKnapsack(items, knapsackCapacity);
 
-    cout << "Maximum profit obtained = " << maxprofit << endl;
+    cout << "Maximum profit obtained = " << maxProfit << endl;
 
     return 0;
 }
