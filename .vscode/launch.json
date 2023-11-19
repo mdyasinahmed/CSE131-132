@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/code/dp/knapsack",
-      "program": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/code/dp/knapsack/build/Debug/outDebug",
+      "cwd": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/lab-project",
+      "program": "d:/CS/CSE131-132_AlgorithmDesignAndAnalysis/lab-project/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
