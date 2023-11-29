@@ -25,8 +25,9 @@ int main() {
     for(i=1; i<=n; i++) {
         for(j=1; j<=m; j++) {
             if(s[i][j]=='S' && (s[i][j+1]=='W' || s[i][j-1]=='W' || s[i+1][j]=='W' || s[i-1][j]=='W')) {
-                //cout<<i<<" "<<j;cout << "\n" ;
-                printf("No\n");
+                //cout<<i<<" "<<j;
+                //cout << "\n" ;
+                cout << "No\n" ;
                 return 0;
             }
 
