@@ -10,7 +10,7 @@ int main() {
     int i, j, k;
     int n, m, d;
 
-    cin>>n>>m;
+    cin >> n>> m;
 
     for(i=1; i<N; i++) {
         for(j=1; j<N; j++)
