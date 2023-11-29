@@ -15,7 +15,9 @@ int main() {
         if( temp2+temp < k ) {
             b[i]= temp2+ ( k-(temp+temp2) );
             count+=  k-(temp+temp2) ;
-        } else b[i]=temp2;
+        } 
+        else b[i]=temp2;  
+        
         temp=b[i];
     }
 
