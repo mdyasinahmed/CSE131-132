@@ -1,10 +1,7 @@
-#include <iostream>
-#include <fstream>
-#include<string>
-#include <cstdlib>
-
+#include <bits/stdc++.h>
 using namespace std;
 int ID;
+
 //custom type todo which has two fields id and task
 struct todo {
     int id;
@@ -12,7 +9,7 @@ struct todo {
 };
 
 //this method is used to add a new task to the list of tasks
-void addtodo() {
+void addToDo() {
     system("cls");
     cout<<"\t\t\t***********************************************************************"<<endl;
 	cout<<"\t\t\t                       WELCOME TO Your ToDo List                       "<<endl;
@@ -41,7 +38,7 @@ void addtodo() {
 
     //if user wants to add a new task again then call the same function else return
     if(ch == 'y'){
-        addtodo();
+        addToDo();
     }
     else{
         cout << "\n\tTask has been added successfully";
@@ -84,6 +81,7 @@ int searchData() {
     int id;
     cout << "\n\tEnter task id: ";
     cin >> id;
+    cout << "\n\n\n";
     todo todo;
     ifstream read;
     read.open("todo.txt");
@@ -142,7 +140,7 @@ void deleteData() {
 void updateData() {
     system("cls");
     cout<<"\t\t\t***********************************************************************"<<endl;
-	cout<<"\t\t\t                       WELCOME TO Your ToDo List                       "<<endl;
+	cout<<"\t\t\t                       WELCOME TO Your To-Do List                       "<<endl;
     cout<<"\t\t\t***********************************************************************"<<endl<<endl<<endl;
     int id = searchData();
     cout << "\n\tYou want to update this task (y/n) : ";
@@ -186,7 +184,7 @@ int main()
 {
     system("cls");
 	system("Color E0"); // "Color XY", X - backgroung color, Y - text color
-    system("title todoapp @copyassignment");
+    system("title toDoApp @copyassignment");
     cout<<"\t\t\t***********************************************************************"<<endl;
     cout<<"\t\t\t*                                                                     *"<<endl;
 	cout<<"\t\t\t*                      WELCOME TO Your ToDo List                      *"<<endl;
@@ -215,7 +213,7 @@ int main()
         cin >> choice;
         switch (choice) {
         case 1:
-            addtodo();
+            addToDo();
             break;
         case 2:
             readData();
