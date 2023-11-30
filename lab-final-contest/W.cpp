@@ -1,26 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
+void solve()
+{
+    long long n, k;
+    cin >> n >> k;
 
-int main() {
+    long long result = (n * (n + 1)) / 2;
+
+    if (k < result) {
+        cout << "-1" << endl;
+        return;
+    }
+    long long res = k - (result - 1);
+
+    for (long long i = 1; i<n; i++)
+        cout << "1 " ;
+
+    cout << res << endl;
+}
+
+int  main() {
     int t;
     cin >> t;
 
     while(t--) {
-        int n, m;
-        cin >> n >> m;
-
-        if(n == 1) {
-            cout << m << endl;
-        } else if(n == 2) {
-            if(m < 4) {
-                cout << "-1" << endl;
-            } else {
-                cout << "1 2" << endl;
-            }
-        } else {
-            cout << "-1" << endl;
-        }
+        solve();
     }
-
     return 0;
 }
