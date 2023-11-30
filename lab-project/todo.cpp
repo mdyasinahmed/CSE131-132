@@ -183,8 +183,8 @@ void updateData() {
 int main()
 {
     system("cls");
-	system("Color E0"); // "Color XY", X - backgroung color, Y - text color
-    system("title toDoApp @copyassignment");
+	system("Color 1F");
+    system("title YASIN's To-Do");
     cout<<"\t\t\t***********************************************************************"<<endl;
     cout<<"\t\t\t*                                                                     *"<<endl;
 	cout<<"\t\t\t*                      WELCOME TO Your ToDo List                      *"<<endl;
