@@ -1,36 +1,43 @@
 #include<bits/stdc++.h>
+#include<algorithm>
+
 using namespace std;
+int counts[200];
 
-void sumMex() {
-    int n;
-    cin >> n;
+int main(){
+    int x;
+    cin>>x;
 
-    map<int, int>mp;
-
-    for(int i=0; i<n; ++i) {
-        int x;
-        cin >> x;
-        mp[x]++;
-    }
-
-    for(int i=0; i<=100; ++i) {
-        while(mp[i]-- > 0){
-            cout << i << ' ';
+    while(x--){
+        for(int i=0;i<=100;i++){
+            counts[i]=0;
         }
+        int q;
+        cin>>q;
+
+        for(int i=0;i<q;i++){
+            int a;
+            cin>>a;
+            counts[a]++;
+        }
+
+        for(int i=0;i<=100;i++){
+            if(counts[i]){
+                cout<<i<<" ";
+                counts[i]--;
+            }else{
+                cout<<i<<endl;
+                break;
+            }
+        }
+
+        for(int i=0;i<=100;i++){
+            while(counts[i]){
+                cout<<i<<" ";
+                counts[i]--;
+            }
+        }
+        cout<<endl;
     }
-
-    puts("");
-}
-
-int main() {
-    int t;
-    cin >> t;
-    
-    
-
-    while(t--) {
-        sumMex();
-    }
-
     return 0;
 }
